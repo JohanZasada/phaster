@@ -1,0 +1,57 @@
+{
+  "name": "phaster",
+  "version": "1.0.0",
+  "description": "A Phaser 3 game fast starter",
+  "main": "src/index.html",
+  "scripts": {
+    "build": "parcel build src/index.html --public-url ./ --no-source-maps",
+    "start": "parcel serve src/index.html",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "phaser",
+    "phaser3",
+    "phaser-boilerplate"
+  ],
+  "author": "refact",
+  "license": "ISC",
+  "dependencies": {
+    "phaser": "^3.20.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.7",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/eslint-plugin": "^7.17.7",
+    "@babel/preset-env": "^7.16.11",
+    "eslint": "^5.16.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.6",
+    "prettier": "^2.6.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "requireConfigFile": false
+    },
+    "plugins": [
+      "@babel"
+    ],
+    "rules": {
+      "prefer-const": [
+        "error"
+      ],
+      "no-var": "error",
+      "prefer-arrow-callback": "error",
+      "prefer-destructuring": [
+        "error"
+      ]
+    }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "packageManager": "yarn@3.2.0"
+}
